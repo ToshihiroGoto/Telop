@@ -1,0 +1,44 @@
+*{
+	margin:0;
+	padding:0;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	font-size:14px;
+	width: 100%;
+	text-align: center;
+	background-color: #E9E9E9;
+	line-height: 160%;
+}
+
+button{
+	padding:5px;
+}
+
+#wrap{
+	width: 320px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#serif{
+	width: 300px;
+	margin: 10px 10px 0 10px;
+	padding:20px;
+	text-align: left;
+	background-color: white;
+	border-radius: 10px;
+}
+
+#serif_bottom{
+	width: 20px;
+	height: 20px;
+	display: block;
+	background-color: white;
+
+	-webkit-transform:translate(150px,-14px) rotate(45deg);
+	-moz-transform:translate(150px,-14px) rotate(45deg);
+	transform:translate(150px,-14px) rotate(45deg);
+}

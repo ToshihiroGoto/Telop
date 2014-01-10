@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ja-JP">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">  
+	
+	<title>Telop.js: sample 5</title>
+
+	<script src="telop.js"></script>
+	<link rel="stylesheet" href="main.css">
+
+	<script>
+		var telop = new Telop({
+			"id":"serif",
+			"class":"serif",
+			"interval":"200",
+		});
+
+		window.onload = function(){
+			telop.setText("隴西出身の李徴は、たいへん物知りで、非常に才能にも恵まれていたが、天宝の最後の年、まだ年少でありながら上級国家公務員の採用試験である「科挙」に合格してその名前を合格者掲示板に載せられ、さらに江南地方の兵事や刑獄などをつかさどる役人に任命された。");
+		}
+	</script>
+
+	<!-- Telop.js CSS -->
+	<style>	
+		#serif div{
+			opacity:0;
+		}
+
+		.serif{
+			-webkit-animation: anime1 0.3s ease forwards;
+			-moz-animation: anime1 0.3s ease forwards;
+			animation: anime1 0.3s ease forwards;
+		}
+
+		@-webkit-keyframes anime1 {
+			0%   {text-shadow:0 0 20px rgb(255,0,0); color:red; opacity:0.1; -webkit-transform: scale(6,6);}
+			100% {text-shadow:none; color:black; opacity:1; -webkit-transform: scale(1,1);}
+		}
+		@-moz-keyframes anime1 {
+			0%   {text-shadow:0 0 20px rgb(255,0,0); color:red; opacity:0.1; -moz-transform: scale(6,6);}
+			100% {text-shadow:none; color:black; opacity:1; -moz-transform: scale(1,1);}
+		}
+		@keyframes anime1 {
+			0%   {text-shadow:0 0 20px rgb(255,0,0); color:red; opacity:0.1; transform: scale(6,6);}
+			100% {text-shadow:none; color:black; opacity:1; transform: scale(1,1);}
+		}
+
+
+		/* required: clearfix */
+		.cf:before,
+		.cf:after {
+		    content:"";
+		    display:table;
+		}
+		
+		.cf:after {
+		    clear:both;
+		}
+	</style>
+</head>
+
+<body>
+
+ 	<div id="wrap">
+		<div id="serif" class="cf"></div>
+		<div id="serif_bottom"></div>
+
+		
+		<button style="margin-bottom:40px;" onclick="javascript:telop.interval=60;telop.setText('隴西出身の李徴は、たいへん物知りで、非常に才能にも恵まれていたが、天宝の最後の年、まだ年少でありながら上級国家公務員の採用試験である「科挙」に合格してその名前を合格者掲示板に載せられ、さらに江南地方の兵事や刑獄などをつかさどる役人に任命された。');document.getElementById('range').value=200">Restart</button>
+
+		<input id="range" type="range" style="width:300px;" min="10" max="1000" step="20" value="200" onchange="javascript:telop.interval=this.value" />
+
+ 	</div>
+
+</body>
+</html>

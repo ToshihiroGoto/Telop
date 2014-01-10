@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja-JP">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">  
+	
+	<title>Telop.js: sample 1</title>
+
+	<script src="telop.js"></script>
+	<link rel="stylesheet" href="main.css">
+
+	<script>
+		var telop = new Telop({
+			"id":"serif",
+			"class":"serif",
+			"interval":"60",
+		});
+
+		window.onload = function(){
+			telop.setText("隴西出身の李徴は、たいへん物知りで、非常に才能にも恵まれていたが、天宝の最後の年、まだ年少でありながら上級国家公務員の採用試験である「科挙」に合格してその名前を合格者掲示板に載せられ、さらに江南地方の兵事や刑獄などをつかさどる役人に任命された。");
+		}
+	</script>
+
+	<!-- Telop.js CSS -->
+	<style>	
+		#serif div{
+			opacity:0;
+		}
+
+		.serif{
+			opacity:1 !important;
+		}
+
+		/* required: clearfix */
+		.cf:before,
+		.cf:after {
+		    content:"";
+		    display:table;
+		}
+		
+		.cf:after {
+		    clear:both;
+		}
+	</style>
+</head>
+
+<body>
+
+ 	<div id="wrap">
+		<div id="serif" class="cf"></div>
+		<div id="serif_bottom"></div>
+ 	</div>
+
+</body>
+</html>
